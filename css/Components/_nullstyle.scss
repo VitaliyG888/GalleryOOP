@@ -1,0 +1,50 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+
+  &::after,
+  &::before {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

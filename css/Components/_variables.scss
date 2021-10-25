@@ -1,0 +1,15 @@
+$Black: #000000;
+$Wight: #ffffff;
+$Grey: #cacaca;
+$Grey-lite: #c4c4c4;
+$btn-color:#666666;
+$btn-color2:#ececec;
+$Darck-grey: #333333;
+
+@mixin transition($property, $time, $style) {
+  transition: $property $time $style;
+}
+
+@mixin spaces-between {
+  justify-content: space-between;
+}

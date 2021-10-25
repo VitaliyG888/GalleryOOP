@@ -1,0 +1,92 @@
+.galery__modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-wrapper {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.modal-overlay--visible {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-content {
+  margin-right: 48px;
+  width: 402px;
+  height: 258px;
+
+  h2 {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: $Darck-grey;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: $Darck-grey;
+  }
+
+  span {
+    display: block;
+    margin-bottom: 41px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #969696;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $Darck-grey;
+  }
+}
+
+.modal-img {
+  margin-right: 48px;
+}
+
+.modal-close {
+  position: absolute;
+  right: 20px;
+  top: 17px;
+  border: none;
+  font-size: 38px;
+  background: none;
+  cursor: pointer;
+}
+
+.disable-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}

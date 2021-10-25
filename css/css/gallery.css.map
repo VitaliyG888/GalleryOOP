@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,EAAG;EACD,WAAW,EAAE,uBAAuB;EACpC,WAAW,EAAE,GAAG",
+"sources": ["../Pages/gallery.scss"],
+"names": [],
+"file": "gallery.css"
+}
