@@ -1,17 +1,17 @@
 @font-face {
-  src: url("../fonts/OpenSans-Regular.woff2") format("woff2");
+  src: url("/fonts/OpenSans-Bold.woff2") format("woff2");
   font-family: "Open Sans";
   font-weight: 400;
   font-style: normal;
   font-display: swap; }
 @font-face {
-  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2");
+  src: url("/fonts/OpenSans-SemiBold.woff2") format("woff2");
   font-family: "Open Sans";
   font-weight: 600;
   font-style: normal;
   font-display: swap; }
 @font-face {
-  src: url("../fonts/OpenSans-Bold.woff2") format("woff2");
+  src: url("/fonts/OpenSans-Bold.woff2") format("woff2");
   font-family: "Open Sans";
   font-weight: 700;
   font-style: normal;
@@ -126,14 +126,12 @@ input[type="number"]:focus {
   max-width: 1630px; }
 
 .gallery-title {
-  font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 3rem;
   text-align: center;
   margin-bottom: 30px; }
 
 .footer-title {
-  font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 2rem;
   color: #3f2aff; }
@@ -194,7 +192,6 @@ input[type="number"]:focus {
   outline: #1b28de solid 1px; }
 
 .download-label {
-  font-family: "Open Sans", sans-serif;
   font-size: 1.3rem;
   font-weight: 400;
   color: #6e3434;
