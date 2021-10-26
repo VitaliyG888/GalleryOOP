@@ -9,7 +9,6 @@
         <h1 class="gallery-title">Загрузка изображений.</h1>
 		<?php
 		include $_SERVER['DOCUMENT_ROOT'] . '/templates/formDownload.php';
-//		$btnClass = 'images-btn';
 		?>
 		<button class="images-btn" name="upload">Загрузить</button>
         <div class="error-message"></div>

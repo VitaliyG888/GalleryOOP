@@ -20,7 +20,6 @@ include $_SERVER['DOCUMENT_ROOT'] . '/helpers/config.php';
 			<h1 class="gallery-title">Галерея изображений.</h1>
 			<?php
 			include $_SERVER['DOCUMENT_ROOT'] . '/templates/formDownload.php';
-//			$btnClass = 'download-btn';
 			?>
 			<button class="download-btn" name="upload">Загрузить</button>
 			<div class="error-message"></div>
