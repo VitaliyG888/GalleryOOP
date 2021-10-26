@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.addEventListener('click', (e) => {
         if (e.target.classList.contains('gallery-btn')) {
+            e.preventDefault();
             const form=document.querySelector('.gallery-list');
             let formData = new FormData(form);
             let images = document.querySelectorAll('.check-del');

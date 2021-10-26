@@ -4,6 +4,7 @@ namespace uploadfiles;
 function checkAndUploadFiles($amtFiles)
 {
 	include $_SERVER['DOCUMENT_ROOT'] . '/helpers/config.php';
+	$error = [];
 	if ($amtFiles <= 5) {
 		foreach ($_FILES['files'] as $key => $value) {
 			foreach ($value as $k => $v) {
@@ -15,7 +16,6 @@ function checkAndUploadFiles($amtFiles)
 			$fileName = $_FILES['files'][$k]['name'];
 			$fileTmpName = $_FILES['files'][$k]['tmp_name'];
 			$errorCode = $_FILES['files'][$k]['error'];
-			$fileName =preg_replace('/[^a-zA-Z0-9.\-_]/', '_', $fileName);
 
 			if (!($errorCode === UPLOAD_ERR_OK && is_uploaded_file($fileTmpName))) {
 				$outputMessage = $errorMessages[$errorCode] ?? $unknownMessage;
@@ -40,6 +40,7 @@ function checkAndUploadFiles($amtFiles)
 				continue;
 			}
 
+			$fileName =preg_replace('/[^a-zA-Z0-9.\-_]/', '_', $fileName);
 			if (!move_uploaded_file($fileTmpName, $uploadPath . $fileName)) {
 				$err = 'При записи файла' . $fileName . ' на диск произошла ошибка.';
 				$error[] = $err;

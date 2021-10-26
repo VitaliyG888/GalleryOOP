@@ -20,7 +20,7 @@
 .gallery-block {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   column-gap: 1rem;
   row-gap: 2rem;
@@ -30,6 +30,8 @@
 .gallery-item {
   flex: 0 0 calc((101% / 3) - 1rem);
   height: 380px;
+  width: 100%;
+  min-width: 350px;
 }
 
 .gallery-item:nth-child(3n) {
@@ -39,8 +41,6 @@
 .gallery-link {
   position: relative;
   margin-bottom: 5px;
-  width: 100%;
-  min-width: 300px;
   height: 100%;
   display: block;
 }

@@ -19,6 +19,7 @@ if (isset($_FILES['files']['tmp_name'])) {
 	$array = array_filter($imagesList, function ($file) {
 		return !in_array($file, ['.', '..']);
 	});
+
 	$array = (array_values($array));
 	$lengArr = count($array);
 	for ($i = 0; $i < $lengArr; $i++) {

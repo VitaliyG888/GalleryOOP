@@ -18,22 +18,12 @@ include $_SERVER['DOCUMENT_ROOT'] . '/helpers/config.php';
 	<section class="gallery">
 		<div class="container container-gallery">
 			<h1 class="gallery-title">Галерея изображений.</h1>
-
-			<form class="download-form" method="post" enctype="multipart/form-data">
-				<label class="download-label" for="images">Загрузка файлов:</label>
-				<div class="input__wrapper">
-					<input type="file" name="files[]" id="input__file" class="input input__file" multiple>
-					<label for="input__file" class="input__file-button">
-                            <span class="input__file-icon-wrapper"><img class="input__file-icon"
-																		src="/img/Download_alt_font_awesome.svg"
-																		alt="Выбрать файл" width="25"></span>
-						<span class="input__file-button-text">Выберите файл</span>
-					</label>
-				</div>
-			</form>
+			<?php
+			include $_SERVER['DOCUMENT_ROOT'] . '/templates/formDownload.php';
+//			$btnClass = 'download-btn';
+			?>
 			<button class="download-btn" name="upload">Загрузить</button>
 			<div class="error-message"></div>
-
 			<form class="gallery-list" method="POST" enctype="multipart/form-data">
 				<div class="gallery-block">
 					<?php
@@ -41,8 +31,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/helpers/config.php';
 					printImages($imageList, $uploadPath);
 					?>
 				</div>
+				<button class="gallery-btn" type="submit">Удалить выбранные картинки</button>
 			</form>
-			<button class="gallery-btn">Удалить выбранные картинки</button>
 		</div>
 	</section>
 </main>

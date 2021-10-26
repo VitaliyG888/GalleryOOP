@@ -11,8 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('click', (e) => {
         document.querySelector('.error-message').innerHTML = '';
         if (e.target.classList.contains('download-btn')) {
+            e.preventDefault();
             const gallery = document.querySelector('.gallery-block');
-            const form = document.querySelector('.download-form');
+            const form = document.querySelector('.images-form');
             let formData = new FormData(form);
 
             postData(`helpers/addImages.php`, formData)
@@ -49,8 +50,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     document.querySelector('.input__file').value = '';
                 });
 
-
         } else if (e.target.classList.contains('images-btn')) {
+            e.preventDefault();
             const form = document.querySelector('.images-form');
             let formData = new FormData(form);
 
