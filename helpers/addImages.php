@@ -16,6 +16,7 @@ if (isset($_FILES['files']['tmp_name'])) {
 	}
 
 	$imagesList = scandir($uploadPath, $sorting_order = SCANDIR_SORT_ASCENDING);
+
 	$array = array_filter($imagesList, function ($file) {
 		return !in_array($file, ['.', '..']);
 	});

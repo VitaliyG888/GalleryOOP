@@ -21,7 +21,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/helpers/config.php';
 			<?php
 			include $_SERVER['DOCUMENT_ROOT'] . '/templates/formDownload.php';
 			?>
-			<button class="download-btn" name="upload">Загрузить</button>
+			<button class="download-btn" type="submit" name="upload">Загрузить</button>
 			<div class="error-message"></div>
 			<form class="gallery-list" method="POST" enctype="multipart/form-data">
 				<div class="gallery-block">
@@ -30,7 +30,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/helpers/config.php';
 					printImages($imageList, $uploadPath);
 					?>
 				</div>
-				<button class="gallery-btn" type="submit">Удалить выбранные картинки</button>
+				<button class="gallery-btn" type="submit" form="data">Удалить выбранные картинки</button>
 			</form>
 		</div>
 	</section>

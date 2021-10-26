@@ -1,4 +1,4 @@
-<form class="images-form" method="post"
+<form class="images-form" id="data" method="post"
 	  enctype="multipart/form-data">
 	<label class="download-label" for="images">Загрузка файлов:</label>
 	<div class="input__wrapper">
