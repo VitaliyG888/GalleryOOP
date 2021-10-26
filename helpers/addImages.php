@@ -9,7 +9,7 @@ if (isset($_FILES['files']['tmp_name'])) {
 	$num = (array_filter($_FILES['files']['tmp_name']));
 	$amtFiles = (count($num, COUNT_RECURSIVE));
 
-	uploadfiles\checkAndUploadFiles($amtFiles);
+	$error = uploadfiles\checkAndUploadFiles($amtFiles);
 
 	if (!empty($error)) {
 		$a['error'] = $error;
