@@ -27,7 +27,6 @@ include $_SERVER['DOCUMENT_ROOT'] . '/helpers/getPictures.php';
 			<form class="gallery-list" method="POST" enctype="multipart/form-data">
 				<div class="gallery-block">
 					<?php
-//					$imageList = scandir($uploadPath, $sorting_order = SCANDIR_SORT_ASCENDING);
 					$files = getpicture\getPictures($uploadPath);
 					printImages($files);
 					?>
