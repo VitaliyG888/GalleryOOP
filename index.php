@@ -24,6 +24,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/helpers/getPictures.php';
 			?>
 			<button class="download-btn" type="submit" form="data">Загрузить</button>
 			<div class="error-message"></div>
+
 			<form class="gallery-list" method="POST" enctype="multipart/form-data">
 				<div class="gallery-block">
 					<?php
