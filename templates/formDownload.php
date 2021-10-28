@@ -10,4 +10,8 @@
 			<span class="input__file-button-text">Выберите файл</span>
 		</label>
 	</div>
+	<select id="images" name="images">
+		<option value="nature">Природа</option>
+		<option value="people">Люди</option>
+	</select>
 </form>

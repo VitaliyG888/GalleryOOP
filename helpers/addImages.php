@@ -3,6 +3,7 @@
 include $_SERVER['DOCUMENT_ROOT'] . '/helpers/config.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/helpers/checkSizeFile.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/helpers/uploadFiles.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/helpers/getPictures.php';
 
 if (isset($_FILES['files']['tmp_name'])) {
 	header('Content-type: application/json');
@@ -15,13 +16,11 @@ if (isset($_FILES['files']['tmp_name'])) {
 		$a['error'] = $error;
 	}
 
-	$imagesList = scandir($uploadPath, $sorting_order = SCANDIR_SORT_ASCENDING);
-
-	$array = array_filter($imagesList, function ($file) {
-		return !in_array($file, ['.', '..']);
-	});
-
-	$array = (array_values($array));
+	$array = [];
+	$files = getpicture\getPictures($uploadPath);
+	foreach ($files as $file) {
+		$array[] = pathinfo($file, PATHINFO_BASENAME);
+	}
 	$lengArr = count($array);
 	for ($i = 0; $i < $lengArr; $i++) {
 		$arr[$i][] = $array[$i];

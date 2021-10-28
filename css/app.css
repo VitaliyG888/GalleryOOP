@@ -208,10 +208,20 @@ input[type="number"]:focus {
   margin-bottom: 2rem; }
 
 .input__wrapper {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   position: relative;
   margin: -10px 0px 10px 0;
   text-align: center; }
+
+#images {
+  width: 200px;
+  height: 30px;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: italic; }
 
 .input__file {
   opacity: 0;
