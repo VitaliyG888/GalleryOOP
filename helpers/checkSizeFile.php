@@ -2,6 +2,7 @@
 namespace sizefile;
 
 /**
+ * Проверяем размер файла для правильного вывода(b, Kb, Mb).
  * @param $size
  * @return mixed
  */

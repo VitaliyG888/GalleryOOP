@@ -1,6 +1,7 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT'] . '/helpers/printImages.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/helpers/config.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/helpers/getPictures.php';
 ?>
 
 	<body>
@@ -21,16 +22,17 @@ include $_SERVER['DOCUMENT_ROOT'] . '/helpers/config.php';
 			<?php
 			include $_SERVER['DOCUMENT_ROOT'] . '/templates/formDownload.php';
 			?>
-			<button class="download-btn" type="submit" name="upload">Загрузить</button>
+			<button class="download-btn" type="submit" form="data">Загрузить</button>
 			<div class="error-message"></div>
 			<form class="gallery-list" method="POST" enctype="multipart/form-data">
 				<div class="gallery-block">
 					<?php
-					$imageList = scandir($uploadPath, $sorting_order = SCANDIR_SORT_ASCENDING);
-					printImages($imageList, $uploadPath);
+//					$imageList = scandir($uploadPath, $sorting_order = SCANDIR_SORT_ASCENDING);
+					$files = getpicture\getPictures($uploadPath);
+					printImages($files);
 					?>
 				</div>
-				<button class="gallery-btn" type="submit" form="data">Удалить выбранные картинки</button>
+				<button class="gallery-btn" type="submit">Удалить выбранные картинки</button>
 			</form>
 		</div>
 	</section>

@@ -10,7 +10,7 @@
 		<?php
 		include $_SERVER['DOCUMENT_ROOT'] . '/templates/formDownload.php';
 		?>
-		<button class="images-btn" type="submit" name="upload" form="data">Загрузить</button>
+		<button class="images-btn" type="submit" form="data">Загрузить</button>
         <div class="error-message"></div>
     </div>
 </section>

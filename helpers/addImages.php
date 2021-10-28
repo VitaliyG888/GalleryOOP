@@ -1,7 +1,7 @@
 <?php
 
 include $_SERVER['DOCUMENT_ROOT'] . '/helpers/config.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/helpers/sizeFile.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/helpers/checkSizeFile.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/helpers/uploadFiles.php';
 
 if (isset($_FILES['files']['tmp_name'])) {

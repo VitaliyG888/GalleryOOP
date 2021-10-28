@@ -44,11 +44,16 @@ function checkAndUploadFiles($amtFiles)
 			if (!move_uploaded_file($fileTmpName, $uploadPath . $fileName)) {
 				$err = 'При записи файла' . $fileName . ' на диск произошла ошибка.';
 				$error[] = $err;
+				continue;
 			}
+
+			$err = 'Загрузка файла ' . $fileName . ' прошла без ошибок.';
+			$error[]=$err;
 		}
 	} else {
 		$err = 'Можно загружать не больше пяти файлов.';
 		$error[] = $err;
 	}
+
 	return $error;
 }

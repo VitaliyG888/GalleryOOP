@@ -1,33 +1,29 @@
 <?php
 /**
+ * Показывает картинки на странице с датой и размером
  * @param $files
- * @param $uploadPath
  */
-function printImages($files, $uploadPath)
+function printImages($files)
 {
-	$files = array_filter($files, function ($file) {
-		return !in_array($file, ['.', '..']);
-	});
-
 	if (count($files)) {
 		foreach ($files as $file) {
-			$title = explode('.', $file);
-			$title = array_shift($title);
-			$title = htmlspecialchars($title);
-			$date = date("d F Y", filectime($uploadPath . '/' . $file));
-			$size = filesize($uploadPath . '/' . $file);
-			require_once($_SERVER['DOCUMENT_ROOT'] . '/helpers/sizeFile.php');
-			$sizeArr = $sizeFiles = sizefile\checkSizeFile($size);
+			$title = pathinfo($file, PATHINFO_FILENAME);
+			$fileName = pathinfo($file, PATHINFO_BASENAME);
+			$date = date("d F Y", filectime($file));
+			$size = filesize($file);
+
+			require_once($_SERVER['DOCUMENT_ROOT'] . '/helpers/checkSizeFile.php');
+			$sizeArr = sizefile\checkSizeFile($size);
 			?>
 			<div class="gallery-item">
-				<a href="/upload/<?= $file ?>" title="<?= $title ?>" class="gallery-link">
-					<img class="gallery-img" src="/upload/<?= $file ?>" alt="alt">
+				<a href="/upload/<?= $fileName ?>" title="<?= $title ?>" class="gallery-link">
+					<img class="gallery-img" src="/upload/<?= $fileName ?>" alt="alt">
 				</a>
 				<label class="check-image">
 					<span class="date-image"><?= $date ?></span>
 					<span class="size-image"><?= $sizeArr['title'] . $sizeArr['symbol'] ?></span>
 					<span class="name-image"><?= $title ?></span>
-					<input class="check-del" type="checkbox" name="delete[]" value="<?= $file ?>" multiple/>
+					<input class="check-del" type="checkbox" name="delete[]" value="<?= $fileName ?>" multiple/>
 				</label>
 			</div>
 			<?php
