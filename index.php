@@ -3,7 +3,6 @@ include $_SERVER['DOCUMENT_ROOT'] . '/helpers/printImages.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/helpers/config.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/helpers/getPictures.php';
 ?>
-
 	<body>
 <header class="header">
 	<div class="container">
