@@ -16,8 +16,8 @@ function printImages($files)
 			$sizeArr = sizefile\checkSizeFile($size);
 			?>
 			<div class="gallery-item">
-				<a href="/upload/<?= $fileName ?>" title="<?= $title ?>" class="gallery-link">
-					<img class="gallery-img" src="/upload/<?= $fileName ?>" alt="alt">
+				<a href="./upload/<?= $fileName ?>" title="<?= $title ?>" class="gallery-link">
+					<img class="gallery-img" src="./upload/<?= $fileName ?>" alt="alt">
 				</a>
 				<label class="check-image">
 					<span class="date-image"><?= $date ?></span>

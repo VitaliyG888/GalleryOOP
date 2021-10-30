@@ -1,7 +1,7 @@
 <div class="container">
-    <?php
-    include $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php';
-    ?>
+	<?php
+	include $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php';
+	?>
 </div>
 
 <section class="gallery">
@@ -10,7 +10,7 @@
 		<?php
 		include $_SERVER['DOCUMENT_ROOT'] . '/templates/formDownload.php';
 		?>
-		<button class="images-btn" type="submit" form="data">Загрузить</button>
+        <button class="images-btn" type="submit" form="data">Загрузить</button>
         <div class="error-message"></div>
     </div>
 </section>

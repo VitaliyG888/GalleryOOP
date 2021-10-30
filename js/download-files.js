@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         let sizeSymbol = fileAdd[2]['symbol'];
                         let fileHtml = `
                     <div class="gallery-item">
-                        <a href="/upload/${fileAdd[0]}" title="${title}" class="gallery-link">
-                            <img class="gallery-img" src="/upload/${fileAdd[0]}" alt="alt">
+                        <a href="./upload/${fileAdd[0]}" title="${title}" class="gallery-link">
+                            <img class="gallery-img" src="./upload/${fileAdd[0]}" alt="alt">
                         </a>
                         <label class="check-image">
                             <span class="date-image">${fileAdd[1]}</span>
