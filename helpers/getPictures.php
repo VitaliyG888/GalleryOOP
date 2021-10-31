@@ -11,12 +11,13 @@ namespace getpicture {
 		$imagesList = [];
 		if(file_exists($uploadPath)) {
 			$d = opendir($uploadPath);
-			while(($file = readdir($d)) != false) {
-				if ($file == '.' or $file == '..') {
+			while($fileName = readdir($d)) {
+				if ($fileName === '.' || $fileName === '..' || is_dir($uploadPath . '/' .$fileName)) {
 					continue;
 				}
-				$imagesList[] = $uploadPath . $file;
+				$imagesList[] = $uploadPath . $fileName;
 			}
+			closedir($d);
 		}
 		return $imagesList;
 	}
